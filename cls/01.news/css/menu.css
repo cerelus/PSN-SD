@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* gnb에 가상요소의 content 속성으로 바 넣기 - menu.css */
+
+/************** 1. 상단영역 **************/
+.top{
+    padding: 20px;
+
+    /* 자식요소인 h1 가운데 정렬 */
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+
+    border: 4px dashed gold;
+    border-radius: 15px;
+    background-color: beige;
+}
+.top > h1{
+    margin-bottom: 20px;
+    font-size: 4rem;
+    color: #333;
+}
+
+.gnb ul{
+    /* 네비게이션 가로정렬 */
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+/* 가상요소 content 속성을 사용해서 바 넣기 */
+.gnb li::after{
+    content: '|';
+    color: gold;
+
+    font-size: 1.8rem;
+    padding-left: 10px;
+}
+.gnb li:first-child::after{
+    vertical-align: 10px;
+}
+.gnb li:last-child::after{
+    content: none;
+}
+.gnb a{
+    font-size: 1.8rem;
+}
+.gnb img{
+    /* 로고크기 지정 
+    -> 가로값만 주게되면 높이는 비율에 맞게 설정됨 */
+    width: 20px;
+}

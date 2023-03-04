@@ -51,13 +51,53 @@ body{
     /* 네비게이션 가로정렬 */
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 13px;
 }
-/* 가상요소를 사용해서 바 넣기 */
+/* 가상요소의 배경색을 사용해서 바 넣기 */
 .gnb li::after{
-    content: '|';
-    color: aqua;
+    content: '';
+    /* content는 가상요소 필수속성 */
+
+    display: inline-block;
+    /* 
+        가상요소는 기본적으로 인라인요소다.
+        -> 가로와 세로길이를 주려면 블럭요소로 변경해야된다.
+
+        [ 인라인블럭요소 ]
+        1. 기본특성은 인라인이기때문에 요소가 수평으로 쌓이고 컨텐츠너비만큼 영역을 잡는다.
+        2. 블럭요소처럼 사이즈를 적용할 수 있다.
+    */
+
+    width: 5px;
+    height: 18px;
+    margin-left: 10px;
+    vertical-align: -2px;
+    /* margin-top으로 요소를 밀게되면 형제요소인 a요소와 함께 밀린다. */
+
+    border-radius: 10px;
+    background-color: gold;
 }
+.gnb li:last-child::after{
+    display: none;
+}
+
+.gnb li:first-child a{
+    /* display: inline-block; */
+    /*
+        ★ 문제발생 : 첫번째 li의 가상요소 바가 다른 바들에 비해 밑으로 내려가 있는 현상
+        -> li때문이다.
+            자식요소가 block, inline-block인경우 자식요소의 크기가 커지면 부모요소가 inline, block이냐에 관계없이 부모요소도 함께 커진다.
+            그렇기때문에 a태그의 자식요소인 img가 인라인블럭이기때문에 img 높이가 늘어날수록 a태그의 높이도 함께 늘어나야된다.
+            그러나 li의 바로 직계인 요소 A가 인라인요소일 경우 그 하위의 요소인 B의 크기가 커져 부모에게 영향을 주더라도 높이값은 변하지않는다.
+        
+        => 첫번째 li의 a를 인라인블럭요소로 만들어준다.
+        => 첫번째 li의 가상요소에 vertical-align을 줘서 맞춰준다.
+    */
+}
+.gnb li:first-child::after {
+    vertical-align: 1px;
+}
+
 .gnb a{
     font-size: 1.8rem;
 }
