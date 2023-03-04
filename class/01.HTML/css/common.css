@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* news.html 공통설정 - common.css */
+
+/************** 0. 공통설정 **************/
+/* 웹폰트 CDN - Noto Sans, Jua  */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR&display=swap');
+/*  [ 폰트설정 ]
+    1. 상단/하단영역
+    font-family: 'Jua', sans-serif;
+    2. 메인영역
+    font-family: 'Noto Sans KR', sans-serif;
+*/
+body *{
+    /* 공사중표시 */
+    outline: 1px dotted darkorange;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.ibx{
+    /* 최대너비설정
+    -> 브라우저의 너비가 800px보다 줄어들면
+    브라우저의 크기에 맞춰 요소의 너비도 줄어든다. */
+    max-width: 800px;
+    /* 박스 수평방향 가운데정렬 */
+    margin: 0 auto;
+    
+    /* ★ min-height 줄예정 */
+}
+
+
+/************** 1. 상단영역 **************/
+.top{
+    padding: 20px;
+
+    /* 자식요소인 h1 가운데 정렬 */
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+
+    border: 4px dashed gold;
+    border-radius: 15px;
+    background-color: beige;
+}
+.top > h1{
+    margin-bottom: 20px;
+    font-size: 4rem;
+    color: #333;
+}
+
+.gnb ul{
+    /* 네비게이션 가로정렬 */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+/* 가상요소를 사용해서 바 넣기 */
+.gnb li::after{
+    content: '|';
+    color: aqua;
+}
+.gnb a{
+    font-size: 1.8rem;
+}
+.gnb img{
+    /* 로고크기 지정 
+    -> 가로값만 주게되면 높이는 비율에 맞게 설정됨 */
+    width: 20px;
+}
+
+/************** 2. 메인영역 **************/
+
+/************** 3. 하단영역 **************/

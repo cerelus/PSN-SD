@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* 외부 CSS방식을 사용시 반드시 최상단에 문자 인코딩 방식을 지정  */
+/* 기본셋팅값 초기화 - reset.css */
+
+html,body,h1,ul{
+    /* 요소에 기본적으로 설정되어있는 마진,패딩값 리셋 */
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* 루트 글자크기 설정
+    -> rem 사용 */
+    font-size: 10px;
+}
+ul{
+    /* 불릿 없애기 */
+    list-style: none;
+}
+a{
+    /* 링크 밑줄 없애기 */
+    text-decoration: none;
+    color: #222;
+}
+img{
+    /* 박스내부의 이미지 하단 공백없애기
+    -> top, bottom 둘다 가능 */
+    vertical-align: bottom;
+}
