@@ -24,5 +24,5 @@ a{
 img{
     /* 박스내부의 이미지 하단 공백없애기
     -> top, bottom 둘다 가능 */
-    vertical-align: bottom;
+    vertical-align: top;
 }
