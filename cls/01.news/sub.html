@@ -10,8 +10,12 @@
     <title>네이버 요약뉴스</title>
     <!-- 익스터널 스타일시트 -->
     <link rel="stylesheet" href="./css/sub.css">
-    <!-- 외부JS넣기 -->
+    <!-- 링크시스템 JS넣기 -->
     <script src="./js/linksys.js"></script>
+    <!-- 서브페이지 JS넣기 -->
+    <script src="./js/ndata.js"></script>
+
+    <script src="./js/sub.js"></script>
 </head>
 <body>
     <!-- 1. 상단영역 -->
@@ -50,7 +54,21 @@
     <!-- 2. 메인영역 -->
     <div id="cont">
         <main class="cont ibx">
-            <img src="./images/main.jpg" alt="메인이미지">
+            <header class="tit">
+                <a href="언론사사이트주소">
+                    <img src="./images/pr1.png" alt="언론사 바로가기">
+                </a>
+                <h2>기사제목</h2>
+            </header>
+            <section class="aimg">
+                <figure>
+                    <img src="./images/arti3.jpg" alt="기사이미지">
+                    <figcaption>설명</figcaption>
+                </figure>
+            </section>
+            <section class="cont">기사내용</section>
+            <div class="rpt">기자이메일</div>
+
         </main>
     </div>
 

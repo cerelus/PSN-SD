@@ -12,7 +12,7 @@
 */
 body *{
     /* 공사중표시 */
-    outline: 1px dotted darkorange;
+    /* outline: 1px dotted darkorange; */
 }
 body{
     font-family: 'Noto Sans KR', sans-serif;
@@ -22,23 +22,28 @@ body{
     -> 브라우저의 너비가 800px보다 줄어들면
     브라우저의 크기에 맞춰 요소의 너비도 줄어든다. */
     max-width: 800px;
+    /* 최소소너비설정
+    -> 브라우저의 너비가 500px보다 늘어나면
+    브라우저의 크기에 맞춰 요소의 너비도 늘어난다. */
+    min-width: 500px;
     /* 박스 수평방향 가운데정렬 */
     margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+
+    border: 4px dashed gold;
+    border-radius: 15px;
+    box-sizing: border-box;
     
-    /* ★ min-height 줄예정 */
 }
 
 
 /************** 1. 상단영역 **************/
 .top{
-    padding: 20px;
-
     /* 자식요소인 h1 가운데 정렬 */
     text-align: center;
     font-family: 'Jua', sans-serif;
 
-    border: 4px dashed gold;
-    border-radius: 15px;
     background-color: beige;
 }
 .top > h1{
@@ -108,5 +113,19 @@ body{
 }
 
 /************** 2. 메인영역 **************/
+.cont > img{
+    width: 100%;
+}
 
 /************** 3. 하단영역 **************/
+.info{
+    margin-bottom: 30px;
+    background-color: #efefef;
+}
+.info address{
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    /* italic 해제 */
+    font-style: normal;
+    font-size: 1.8rem;
+}

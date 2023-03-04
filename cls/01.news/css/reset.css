@@ -2,7 +2,7 @@
 /* 외부 CSS방식을 사용시 반드시 최상단에 문자 인코딩 방식을 지정  */
 /* 기본셋팅값 초기화 - reset.css */
 
-html,body,h1,ul{
+html,body,h1,h2,ul,figure{
     /* 요소에 기본적으로 설정되어있는 마진,패딩값 리셋 */
     margin: 0;
     padding: 0;

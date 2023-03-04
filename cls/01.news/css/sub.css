@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* 외부css 합치기 */
+@import url(./reset.css);
+@import url(./common.css);
+
+/* tit 영역 */
+.tit img{
+    height: 40px;
+}
+.tit h2{
+    font-size: 30px;
+    font-weight: normal;
+
+    margin-top: 30px;
+}
+
+/* aimg 영역 */
+.aimg{
+    margin: 20px 0;
+}
+.aimg img{
+    height: min(400px,46vw);
+    min-height: 230px;
+}
+figcaption{
+    margin-left: 5px;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* cont 영역 */
+.cont{
+    font-size: 1.7rem;
+}
+/* rpt 영역 */
+.rpt{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 10px;
+
+    font-size: 1.4rem;
+    font-style: italic;
+    border-radius: 15px;
+    background-color: #dedede;
+}
