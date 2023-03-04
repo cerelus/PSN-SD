@@ -4,11 +4,11 @@
 @import url(./reset.css);
 @import url(./common.css);
 
-/* tit 영역 */
-.tit img{
+/* ntit 영역 */
+.ntit img{
     height: 40px;
 }
-.tit h2{
+.ntit h2{
     font-size: 30px;
     font-weight: normal;
 
@@ -19,10 +19,10 @@
 .aimg{
     margin: 20px 0;
 }
-.aimg img{
+/* .aimg img{
     height: min(400px,46vw);
     min-height: 230px;
-}
+} */
 figcaption{
     margin-left: 5px;
     font-style: italic;
@@ -30,8 +30,8 @@ figcaption{
     color: #555;
 }
 
-/* cont 영역 */
-.cont{
+/* ncont 영역 */
+.ncont{
     font-size: 1.7rem;
 }
 /* rpt 영역 */
