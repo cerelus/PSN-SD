@@ -109,14 +109,51 @@ function loadFn(){
         // 현재 슬라이드 번호 읽어오기
         let cseq = clist[seq].getAttribute("data-seq");
 
+        // 블릿초기화
+        for(let x of indic) x.classList.remove("on");
+
+        // 읽어온 순번에 해당하는 블릿에 on클래스 부여
+        indic[cseq].classList.add("on");
+
         
     }; // goSlide 함수
 
-    // (3) 이동버튼에 이벤트 설정하기
+    // 3. 이동버튼에 이벤트 설정하기
     sbtn.forEach((ele,idx)=>{
         ele.onclick = () => {
+            // 먼저 자동넘김 지우기 함수호출
+            clearAuto();
+            // 슬라이드 넘김 함수호출
             goSlide(idx);
         }; // click
     }); // forEach
+
+    /*************************************************/
+
+    // 0. 변수설정
+    // 인터발함수 지우기위한 변수
+    let autoI;
+    // 타임아웃함수 지우기위한 변수
+    let autoT;
+
+    // 1. 슬라이드 자동넘김 함수
+    function autoSlide(){
+        // 슬라이드가 기본 오른쪽방향으로 흘러가기때문에 매개변수 1을 셋팅함
+        autoI = setInterval(()=>goSlide(1),3000);
+    } // autoSlide 함수
+    // 슬라이드 자동넘김 호출
+    autoSlide();
+
+    // 2. 자동넘김(인터발) 지우고 일정시간후 다시셋팅
+    function clearAuto(){
+        // 인터발 지우기
+        clearInterval(autoI);
+        /* 버튼 여러번 클릭할때마다 타임아웃이 여러개 셋팅되서 쓰나미실행된다.
+            -> 버튼클릭시 타임아웃을 반드시 지워줘야한다. */
+        clearTimeout(autoT)
+        // 다시 작동하도록 타임아웃으로 인터발함수 호출
+        autoT = setTimeout(autoSlide,5000);
+    } // clearAuto 함수
+
     
 } // loadFn 함수
