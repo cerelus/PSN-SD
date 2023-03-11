@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* basic_slide.html - 메인CSS */
+
+/* reset */
+html,body,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    /* 블릿제거 */
+    list-style: none;
+}
+
+
+/* main */
+h1{
+    text-align: center;
+}
+#container{
+    /* #slide, .sbtn, .indic의 부모 */
+    position: relative;
+    margin: 0 auto;
+
+    width: 913px;
+    height: 564px;
+    /* 넘치는 이미지 숨기기 */
+    overflow: hidden;
+}
+.slide{
+    /* 이미지들을 가로로 배치 */
+    display: flex;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide li{
+    /* 
+        flex-shrink의 기본값은 1 - 부모의 크기만큼 자동으로 줄어듬
+        -> flex-shrink: 0 - 줄어들지 않음
+    */
+    flex-shrink: 0;
+
+    /*
+        자식요소(flex item)의 방향(axis)이 가로이므로 flex-basis는 가로크기로 설정됨
+        -> height는 flex박스 자식요소 등분할시 자동 100%이다.
+    */
+    flex-basis: 100%;
+
+    /* 
+        한번에 작성하기
+        flex: 0 0 100%; 
+        _______________________________________
+        flex: flex-grow flex-shrink flex-basis
+        -> 기본값은 flex: 0 1 auto
+    */
+}
+.slide li img{
+    /* 이미지를 부모인 li크기만큼 맞춤 */
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    /* cover : 비율유지하면서 박스의 크기에 맞게 이미지를 채움
+    -> 그만큼 이미지가 잘려서 나옴 */
+}
+
+/* 버튼 */
+.sbtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.lb{
+    left: 20px;
+}
+.rb{
+    right: 20px;
+}
+
+/* 블릿버튼 */
+.indic{
+    /* 블릿들을 가로로 배치 */
+    display: flex;
+    position: absolute;
+    /* 블릿 가운데 정렬 */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.indic li{
+    padding: 0 2px;
+
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+.indic li img{
+    /* 블릿겹치기 */
+    position: absolute;
+}
+.indic li img:last-child{
+    /* 회색블릿 안보이게 */
+    opacity: 0;
+}
+.indic li.on img:last-child{
+    /* li에 on클래스 부여여시 회색블릿 보이기기 */
+    opacity: 1;
+}

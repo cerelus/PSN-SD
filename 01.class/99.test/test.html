@@ -1,80 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
-    <style>
-        body *{
-            outline: 1px dashed darkgoldenrod;
-        }
-        ul,div{
-            display: flex;
-            justify-content: space-around
-        }
-        img{
-            width: 50px;
-        }
-        /* .one::before{
-            content: '';
-            background-color: #000;
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-        } */
-        ul{
-            /* list-style: none; */
-        }
-        a{
-            text-decoration: none;
-            font-size: 30px;
-        }
-        button{
-            height: 100px;
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>01.가로방향 배너 슬라이드</title>
+    <link rel="stylesheet" href="css/test.css">
+    <!-- 외부JS삽입 -->
+    <script src="js/main.js"></script>
 </head>
+
 <body>
+    <section id="container">
+        <!--탑영역-->
+        <header><img src="images/index_01.jpg" width="1381" height="222" alt="메뉴"></header>
+        <!--슬라이드 배너 영역-->
+        <section>
+            <!--슬라이드-->
+            <ul id="slide">
+                <li><img src="../02.slide/images/ban1.jpg" alt="slide"></li>
+                <li><img src="../02.slide/images/ban2.jpg" alt="slide"></li>
+                <li><img src="../02.slide/images/ban3.jpg" alt="slide"></li>
+                <li><img src="../02.slide/images/ban4.jpg" alt="slide"></li>
+                <li><img src="../02.slide/images/ban5.jpg" alt="slide"></li>
+            </ul>
+            <!--이동버튼-->
+            <a href="#" class="abtn ab1"><img src="images/left_btn.png" alt="왼쪽이동버튼"></a>
+            <a href="#" class="abtn ab2"><img src="images/right_btn.png" alt="오른쪽이동버튼"></a>
+
+            <!--블릿버튼-->
+            <ol class="indic">
+                <li class="on">
+                    <img src="images/dot1.png" alt="흰색">
+                    <img src="images/dot2.png" alt="회색">
+                </li>
+                <li>
+                    <img src="images/dot1.png" alt="흰색">
+                    <img src="images/dot2.png" alt="회색">
+                </li>
+                <li>
+                    <img src="images/dot1.png" alt="흰색">
+                    <img src="images/dot2.png" alt="회색">
+                </li>
+                <li>
+                    <img src="images/dot1.png" alt="흰색">
+                    <img src="images/dot2.png" alt="회색">
+                </li>
+                <li>
+                    <img src="images/dot1.png" alt="흰색">
+                    <img src="images/dot2.png" alt="회색">
+                </li>
+            </ol>
 
 
-    <ul>
-        <li class="one"><span>asfasdfas</span></li>
-        <li class="one"><div style="display:inline-block;"><img src="../01.news/images/arti1.jpg" alt=""></div></li>
-    </ul>
-    <div>
-        <div class="one"><span>asfasdfas</span></div>
-        <div class="one"><span style="display:inline-block;"><img src="../01.news/images/arti1.jpg" alt=""></span></div>
-    </div>
-    <ul>
-        <li class="one"><span>asfasdfas</span></li>
-        <li class="one"><span style="display:inline-block;"><img src="../01.news/images/arti1.jpg" alt=""></span></li>
-    </ul>
+        </section>
+        <!--사이드 영역-->
+        <aside><img src="images/index_03.jpg" width="467" height="564" alt="03"></aside>
+        <!--하단영역-->
+        <footer>
+            대표이사. So Hee Kim │ Business License. 130-86-24632 │ Mail-order Licenst. 제2014-서울마포-0835호 │ Personal info manager. Mi Ryung Oh [사업자정보확인]<br>
 
+            Company. ㈜bebe │ Tel. 0502-707-8888 │ Fax. 02-335-5274 │ E-mail. nanda@stylenanda.com │ Address. 서울특별시 마포구 잔다리로 32 서문빌딩 2,3,4,6F<br>
 
+            ⓒ 2017 NANDA All rights reserved. │ 개인정보취급방침 │ Terms of use │ Hosting by cafe24
 
-
-
-
-
-
-
-
-<!-- 
-
-    <ul>
-        <li class="one"><span>asfasdfas</span></li>
-        <li class="one"><div style="display:inline-block;"><img src="../01.news/images/arti1.jpg" alt=""></div></li>
-    </ul>
-    <div>
-        <div class="one"><a href="#">asfasdfas</a></div>
-        <div class="one"><a href="#"><span style="font-size:50px;">안녕</span></a></div>
-    </div>
-
-    <div>
-        <div class="one"><a href="#">asfasdfas</a></div>
-        <div class="one"><a href="#"><button>안녕</button></a></d>
-    </div> -->
-
-    
-</body>
-</html>
+        </footer>
+    </section>
+</body></html>
