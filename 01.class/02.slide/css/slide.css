@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* slide.html - 메인CSS */
+
+/* reset */
+html,body,ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* main */
+h1{
+    text-align: center;
+}
