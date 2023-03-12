@@ -11,9 +11,12 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
+    // .mySlides - 슬라이드들
   var slides = document.getElementsByClassName("mySlides");
+  // .column img - 버튼 이미지
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
+   // slides.length 슬라이드개수 5개
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {

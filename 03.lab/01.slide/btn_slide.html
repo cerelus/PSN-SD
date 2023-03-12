@@ -5,85 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>버튼 슬라이드</title>
 
-        <link rel="stylesheet" href="./css/bslide.css" />
-        <script src="./js/bslide.js"></script>
+        <link rel="stylesheet" href="./css/bslide_2.css" />
+        <script src="./js/bslide_2.js"></script>
     </head>
     <body>
         <h2>버튼 슬라이드</h2>
 
         <div class="container">
-            <div class="mySlides">
-                <img src="./images/ban1.jpg" style="width: 100%" />
-            </div>
+            <!-- 버튼 -->
+            <ol class="btns">
+                <li class="op1">
+                    <img src="./images/car2_ct3_b1.jpg" style="width: 100%" alt="The Woods" />
+                </li>
+                <li>
+                    <img src="./images/car2_ct3_b2.jpg" style="width: 100%" alt="Trolltunga, Norway" />
+                </li>
+                <li>
+                    <img src="./images/car2_ct3_b3.jpg" style="width: 100%" alt="Mountains and fjords" />
+                </li>
+                <li>
+                    <img src="./images/car2_ct3_b4.jpg" style="width: 100%" alt="Northern Lights" />
+                </li>
+                <li>
+                    <img src="./images/car2_ct3_b5.jpg" style="width: 100%" alt="Nature and sunrise" />
+                </li>
+            </ol>
 
-            <div class="mySlides">
-                <img src="http://placehold.it/500x100" style="width: 100%" />
+            <div class="slidebx">
+                <ul class="slide2">
+                    <li class="dbk">
+                        <img src="./images/car2_ct3_b1.jpg" style="width: 100%" />
+                    </li>
+                    <li>
+                        <img src="./images/car2_ct3_b2.jpg" style="width: 100%" />
+                    </li>
+                    <li>
+                        <img src="./images/car2_ct3_b3.jpg" style="width: 100%" />
+                    </li>
+                    <li>
+                        <img src="./images/car2_ct3_b4.jpg" style="width: 100%" />
+                    </li>
+                    <li>
+                        <img src="./images/car2_ct3_b5.jpg" style="width: 100%" />
+                    </li>
+                </ul>
+                <!-- 이동버튼 -->
+                <a class="abtn left onclick="plusSlides(-1)">
+                    <img src="./images/car2_left.png" alt="" />
+                </a>
+                <a class="abtn right" onclick="plusSlides(1)">
+                    <img src="./images/car2_right.png" alt="" />
+                </a>
             </div>
-
-            <div class="mySlides">
-                <img src="http://placehold.it/500x100" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-                <img src="http://placehold.it/500x100" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-                <img src="http://placehold.it/500x100" style="width: 100%" />
-            </div>
-
             <!-- <div class="caption-container">
                 <p id="caption"></p>
             </div> -->
-            
-            <!-- 버튼 -->
-            <div class="row">
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="./images/ban1.jpg"
-                        style="width: 100%"
-                        onclick="currentSlide(1)"
-                        alt="The Woods"
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="http://placehold.it/500x100"
-                        style="width: 100%"
-                        onclick="currentSlide(2)"
-                        alt="Trolltunga, Norway"
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="http://placehold.it/500x100"
-                        style="width: 100%"
-                        onclick="currentSlide(3)"
-                        alt="Mountains and fjords"
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="http://placehold.it/500x100"
-                        style="width: 100%"
-                        onclick="currentSlide(4)"
-                        alt="Northern Lights"
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="http://placehold.it/500x100"
-                        style="width: 100%"
-                        onclick="currentSlide(5)"
-                        alt="Nature and sunrise"
-                    />
-                </div>
-            </div>
         </div>
     </body>
 </html>

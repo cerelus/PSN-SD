@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* btn_slide.html - 메인CSS */
+
+/* reset */
+html,body,h2,ul,ol,p{
+  margin: 0;
+  padding: 0;
+}
+ul,ol{
+  list-style: none;
+}
+img{
+  vertical-align: top;
+}
+
+/* main */
+.slide2 li{
+  display: none;
+}
+.abtn{
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  /* background: url; */
+}
+.right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.left:hover,
+.right:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.btns li{
+  cursor: pointer;
+  float: left;
+  width: 16.66%;
+  opacity: 0.6;
+}
+
+.op1,
+.btns li:hover {
+  opacity: 1;
+}
+
+.dbk{
+  display: block;
+}
