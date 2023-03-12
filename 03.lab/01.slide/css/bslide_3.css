@@ -15,6 +15,9 @@ img{
 }
 
 /* main */
+.btnbx h2{
+  margin: 30px 0;
+}
 #container{
   display: flex;
 }
@@ -60,19 +63,31 @@ img{
 .btns{
   display: flex;
   flex-direction: column;
-
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px 0;
   width: 50%;
+  
 }
-.btns li{
+.btns>div{
+  position: relative;
+
+  width: 70%;
   cursor: pointer;
   opacity: 0.6;
+  padding: 25px;
+  box-sizing: border-box;
+
+  border: 1px solid #ccc;
 }
-.btns li img{
-  width: 100%;
+.btns div img{
+  position: absolute;
   height: 100%;
+  top: 0;
+  right: 0;
 }
-.btns li.op1,
-.btns li:hover {
+.btns div.op1,
+.btns div:hover {
   opacity: 1;
 }
 
