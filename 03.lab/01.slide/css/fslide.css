@@ -47,16 +47,3 @@ h1{
 .slide li.on{
     opacity:1;
 }
-
-/* 버튼 */
-.sbtn{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.lb{
-    left: 20px;
-}
-.rb{
-    right: 20px;
-}
