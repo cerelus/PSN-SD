@@ -1,17 +1,28 @@
-// btn_slide.html - 메인JS
+var slideIndex = 1;
+showSlides(slideIndex);
 
-// 캐릭터 데이터 셋팅
-const cat = {
-    red: {name: "Lightning McQueen"
-    description
-    ,
-    "Number 95 Lightning McQueen is still a hotshot race car, but his rookie days are past him. Now a permanent resident of Radiator Springs, Lightning has become a bona fide worldwide celebrity as winner of four Piston Cups."
-};
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// 로드구역
-window.addEventListener("DOMContentLoaded",loadFn);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// 로드함수
-function loadFn(){
-
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
